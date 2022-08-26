@@ -22,7 +22,6 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // desc : body
       body: _tabs[_selectedIndex],
 
@@ -36,26 +35,11 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
         selectedItemColor: Colors.black,
         currentIndex: _selectedIndex,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Category',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shop),
-            label: 'Stores',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Category'),
+          BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Stores'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Cart'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         onTap: (index) {
           setState(() {

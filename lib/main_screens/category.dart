@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:multistore/categories/accessory_category.dart';
+import 'package:multistore/categories/beauty_category.dart';
+import 'package:multistore/categories/electronic_category.dart';
+import 'package:multistore/categories/homegarden_category.dart';
+import 'package:multistore/categories/kids_category.dart';
+import 'package:multistore/categories/men_category.dart';
+import 'package:multistore/categories/shoes_category.dart';
+import 'package:multistore/categories/women_category.dart';
 import 'package:multistore/widgets/fake_search.dart';
+
+import '../categories/bags_category.dart';
 
 List<ItemsData> items = [
   ItemsData(label: 'men'),
@@ -80,7 +90,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               },
               child: Container(
                 color: items[index].isSelected ? Colors.white : Colors.grey.shade300,
-                height: 100.h,
+                height: 70.h,
                 child: Center(child: Text(items[index].label)),
               ),
             );
@@ -106,15 +116,15 @@ class _CategoryScreenState extends State<CategoryScreen> {
         },
         scrollDirection: Axis.vertical,
         children: [
-          Center(child: Text('men category')),
-          Center(child: Text('women category')),
-          Center(child: Text('shoes category')),
-          Center(child: Text('bags category')),
-          Center(child: Text('electronics category')),
-          Center(child: Text('accessories category')),
-          Center(child: Text('home and garden category')),
-          Center(child: Text('kids category')),
-          Center(child: Text('beauty category')),
+          MenCategory(),
+          WomenCategory(),
+          ShoesCategory(),
+          BagsCategory(),
+          ElectronicCategory(),
+          AccessoryCategory(),
+          HomeGardenCategory(),
+          KidsCategory(),
+          BeautyCategory(),
         ],
       ),
     );
